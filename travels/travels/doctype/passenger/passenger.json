@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{full_name}-{####}",
+ "creation": "2025-01-11 21:11:34.033255",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "given_names",
+  "full_name",
+  "date_of_birth",
+  "address",
+  "column_break_yqca",
+  "surname",
+  "gender",
+  "place_of_birth",
+  "profession",
+  "passport_information_section",
+  "identity_image",
+  "passport_issuing_country",
+  "country_code",
+  "date_of_issue",
+  "column_break_dmxa",
+  "personal_identity_type",
+  "identity_number",
+  "passport_issuing_city",
+  "type",
+  "passport_expiry_date",
+  "section_break_emhb",
+  "phone_number",
+  "column_break_mmhs",
+  "email"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "column_break_yqca",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "passport_issuing_country",
+   "fieldtype": "Link",
+   "label": "Passport Issuing Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "passport_expiry_date",
+   "fieldtype": "Date",
+   "label": "Date Of Expiry"
+  },
+  {
+   "fieldname": "section_break_emhb",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_mmhs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "passport_issuing_city",
+   "fieldtype": "Data",
+   "label": "Issuing Authority"
+  },
+  {
+   "fieldname": "profession",
+   "fieldtype": "Data",
+   "label": "Profession"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place Of Birth"
+  },
+  {
+   "fieldname": "date_of_issue",
+   "fieldtype": "Date",
+   "label": "Date Of Issue"
+  },
+  {
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "P"
+  },
+  {
+   "fieldname": "passport_information_section",
+   "fieldtype": "Section Break",
+   "label": "Passport Information"
+  },
+  {
+   "fieldname": "column_break_dmxa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "given_names",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Given Names",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "surname",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SurName",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "identity_image",
+   "fieldtype": "Attach Image",
+   "label": "Identity Image",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personal_identity_type",
+   "fieldtype": "Select",
+   "label": "Personal Identity Type",
+   "options": "Passport\nIdentity Card",
+   "reqd": 1
+  },
+  {
+   "fieldname": "identity_number",
+   "fieldtype": "Data",
+   "label": "Identity Number",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 15:15:38.242338",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Passenger",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

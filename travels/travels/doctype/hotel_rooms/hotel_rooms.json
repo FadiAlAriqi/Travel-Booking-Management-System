@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:rooms",
+ "creation": "2025-01-13 08:05:33.640000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rooms",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "rooms",
+   "fieldtype": "Link",
+   "label": "Rooms",
+   "options": "Room",
+   "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nBooked\nNot Available"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-13 10:31:26.256812",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Hotel Rooms",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

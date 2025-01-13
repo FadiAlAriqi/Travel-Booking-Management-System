@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{airline}, {manufacture} {aircraft_type}",
+ "creation": "2025-01-11 12:08:17.571249",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airline",
+  "capacity",
+  "column_break_huwm",
+  "model",
+  "manufacture",
+  "aircraft_type",
+  "section_break_heyy",
+  "images"
+ ],
+ "fields": [
+  {
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "label": "Airline",
+   "options": "Airline"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Link",
+   "label": "Model",
+   "options": "Airplane Model"
+  },
+  {
+   "fieldname": "capacity",
+   "fieldtype": "Int",
+   "label": "Capacity"
+  },
+  {
+   "fieldname": "column_break_huwm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "model.manufacture",
+   "fieldname": "manufacture",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Manufacture",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "model.aircraft_type",
+   "fieldname": "aircraft_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Aircraft Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_heyy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Image"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-11 17:20:55.437550",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Airplane",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

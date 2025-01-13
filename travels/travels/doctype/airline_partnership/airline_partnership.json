@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2025-01-13 12:05:58.811483",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "airline",
+  "commission"
+ ],
+ "fields": [
+  {
+   "fieldname": "airline",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Airline ",
+   "options": "Airline",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Commission",
+   "non_negative": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-13 14:21:42.559769",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Airline Partnership",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

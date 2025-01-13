@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "prompt",
+ "creation": "2025-01-11 11:41:56.117800",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "iata_code",
+  "icao_code",
+  "country",
+  "column_break_zixs",
+  "call_sign",
+  "alias",
+  "headquarters",
+  "section_break_klji",
+  "commission_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "iata_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "IATA Code"
+  },
+  {
+   "fieldname": "icao_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ICAO Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zixs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "call_sign",
+   "fieldtype": "Data",
+   "label": "Call Sign"
+  },
+  {
+   "fieldname": "alias",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Alias"
+  },
+  {
+   "fieldname": "headquarters",
+   "fieldtype": "Data",
+   "label": "Headquarters",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_klji",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 13:01:21.225869",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Airline",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

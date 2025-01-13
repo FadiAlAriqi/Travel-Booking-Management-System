@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-13 13:21:50.953438",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "airlines_section",
+  "airlines",
+  "transport_companies_section",
+  "transport_companies",
+  "hotels_section",
+  "hotels",
+  "rental_companies_section",
+  "rental_companies"
+ ],
+ "fields": [
+  {
+   "fieldname": "airlines_section",
+   "fieldtype": "Section Break",
+   "label": "Airlines"
+  },
+  {
+   "fieldname": "airlines",
+   "fieldtype": "Table",
+   "label": "Airlines",
+   "options": "Airline Partnership"
+  },
+  {
+   "fieldname": "transport_companies_section",
+   "fieldtype": "Section Break",
+   "label": "Transport Companies"
+  },
+  {
+   "fieldname": "transport_companies",
+   "fieldtype": "Table",
+   "label": "Transport Companies",
+   "options": "Transport Company Partnership"
+  },
+  {
+   "fieldname": "hotels_section",
+   "fieldtype": "Section Break",
+   "label": "Hotels"
+  },
+  {
+   "fieldname": "hotels",
+   "fieldtype": "Table",
+   "label": "Hotels",
+   "options": "Hotel Partnership"
+  },
+  {
+   "fieldname": "rental_companies_section",
+   "fieldtype": "Section Break",
+   "label": "Rental Companies"
+  },
+  {
+   "fieldname": "rental_companies",
+   "fieldtype": "Table",
+   "label": "Rental Companies",
+   "options": "Rental Company Partnership"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-01-13 13:23:41.934850",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Partners",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

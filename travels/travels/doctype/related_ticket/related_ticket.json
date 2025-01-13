@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{passenger_name}-{trip}-{####}",
+ "creation": "2025-01-11 21:10:15.199529",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "passenger_name",
+  "column_break_xubd",
+  "trip",
+  "trip_type",
+  "column_break_hdbb",
+  "seat_number",
+  "section_break_xitw",
+  "departure_airport",
+  "departure_station",
+  "column_break_cbbi",
+  "arrival_airport",
+  "arrival_station",
+  "section_break_dcyb",
+  "departure_date",
+  "column_break_jxfq",
+  "departure_time",
+  "column_break_ifds",
+  "duration",
+  "column_break_zrbe",
+  "status",
+  "section_break_cday",
+  "travel_preferences",
+  "section_break_iand",
+  "trip_price",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "passenger_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Passenger Name",
+   "options": "Passenger",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_xubd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trip",
+   "fieldtype": "Link",
+   "label": "Trip",
+   "options": "Trip"
+  },
+  {
+   "fieldname": "column_break_hdbb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "seat_number",
+   "fieldtype": "Data",
+   "label": "Seat Number"
+  },
+  {
+   "fieldname": "section_break_xitw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Flight'",
+   "fieldname": "departure_airport",
+   "fieldtype": "Link",
+   "label": "Departure Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Road Trip'",
+   "fieldname": "departure_station",
+   "fieldtype": "Link",
+   "label": "Departure Station",
+   "options": "Transport Company Station"
+  },
+  {
+   "fieldname": "column_break_cbbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Flight'",
+   "fieldname": "arrival_airport",
+   "fieldtype": "Link",
+   "label": "Arrival Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Road Trip'",
+   "fieldname": "arrival_station",
+   "fieldtype": "Link",
+   "label": "Arrival Station",
+   "options": "Transport Company Station"
+  },
+  {
+   "fieldname": "section_break_dcyb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "trip.departure_date",
+   "fieldname": "departure_date",
+   "fieldtype": "Date",
+   "label": "Departure Date"
+  },
+  {
+   "fieldname": "column_break_jxfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip.departure_time",
+   "fieldname": "departure_time",
+   "fieldtype": "Time",
+   "label": "Departure Time"
+  },
+  {
+   "fieldname": "column_break_ifds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip.trip_duration",
+   "fieldname": "duration",
+   "fieldtype": "Duration",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "column_break_zrbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Booked",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Booked\nCanceled"
+  },
+  {
+   "fieldname": "section_break_cday",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "travel_preferences",
+   "fieldtype": "Table",
+   "label": "Travel Preferences",
+   "options": "Travel Preferences"
+  },
+  {
+   "fieldname": "section_break_iand",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "trip.price",
+   "fieldname": "trip_price",
+   "fieldtype": "Currency",
+   "label": "Trip Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "trip_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Trip Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-12 12:05:45.079998",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Related Ticket",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{Company}, {Vehicle} - {####}",
+ "creation": "2025-01-12 14:22:54.719309",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_frnu",
+  "vehicle_type",
+  "column_break_gknb",
+  "vehicle",
+  "rental__information_section",
+  "rental_start_date",
+  "daily_rental_price",
+  "column_break_bfnb",
+  "rental_end_date",
+  "section_break_gzgz",
+  "passenger_name",
+  "email",
+  "column_break_mgyw",
+  "phone_number",
+  "payment_information_section",
+  "payment_method",
+  "column_break_sxiq",
+  "payment_status",
+  "additional_information_section",
+  "pick_up_location",
+  "location_notes",
+  "column_break_xjro",
+  "drop_off_location",
+  "additional_services_section",
+  "insurance_options",
+  "column_break_cfjb",
+  "accessories_available"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Transport or Rental Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_frnu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Vehicles",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental__information_section",
+   "fieldtype": "Section Break",
+   "label": "Rental  Information"
+  },
+  {
+   "fieldname": "rental_start_date",
+   "fieldtype": "Date",
+   "label": "Rental Start Date"
+  },
+  {
+   "fieldname": "daily_rental_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Daily Rental Price",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bfnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rental_end_date",
+   "fieldtype": "Date",
+   "label": "Rental End Date"
+  },
+  {
+   "fieldname": "section_break_gzgz",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "passenger_name",
+   "fieldtype": "Link",
+   "label": "Passenger Name",
+   "options": "Passenger"
+  },
+  {
+   "fetch_from": "passenger_name.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "column_break_mgyw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "passenger_name.phone_number",
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "payment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Information"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Cash\nBank Transfer\nCredit Card\nDebit Card\nDeferred Payment\nMobile Payment\nDigital Wallet\nCryptocurrency"
+  },
+  {
+   "fieldname": "column_break_sxiq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Paid\nUnpaid\nPending\nPartially Paid"
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information "
+  },
+  {
+   "fieldname": "pick_up_location",
+   "fieldtype": "Data",
+   "label": "Pick_up Location"
+  },
+  {
+   "fieldname": "location_notes",
+   "fieldtype": "Long Text",
+   "label": "Location Notes"
+  },
+  {
+   "fieldname": "column_break_xjro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "drop_off_location",
+   "fieldtype": "Data",
+   "label": "Drop_off Location"
+  },
+  {
+   "fieldname": "additional_services_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Services"
+  },
+  {
+   "fieldname": "insurance_options",
+   "fieldtype": "Select",
+   "label": "Insurance Options",
+   "options": "Collision Damage Waiver (CDW) - \u062a\u0646\u0627\u0632\u0644 \u0639\u0646 \u0623\u0636\u0631\u0627\u0631 \u0627\u0644\u0627\u0635\u0637\u062f\u0627\u0645\nLiability Insurance - \u062a\u0623\u0645\u064a\u0646 \u0627\u0644\u0645\u0633\u0624\u0648\u0644\u064a\u0629\nPersonal Accident Insurance - \u062a\u0623\u0645\u064a\u0646 \u0627\u0644\u062d\u0648\u0627\u062f\u062b \u0627\u0644\u0634\u062e\u0635\u064a\u0629\nTheft Protection - \u062d\u0645\u0627\u064a\u0629 \u0645\u0646 \u0627\u0644\u0633\u0631\u0642\u0629\nRoadside Assistance - \u0645\u0633\u0627\u0639\u062f\u0629 \u0639\u0644\u0649 \u0627\u0644\u0637\u0631\u064a\u0642"
+  },
+  {
+   "fieldname": "column_break_cfjb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accessories_available",
+   "fieldtype": "Select",
+   "label": "Accessories Available",
+   "options": "Child Seat - \u0645\u0642\u0639\u062f \u0637\u0641\u0644\nGPS Navigation System - \u0646\u0638\u0627\u0645 \u062a\u062d\u062f\u064a\u062f \u0627\u0644\u0645\u0648\u0627\u0642\u0639 GPS\nRoof Rack - \u062d\u0627\u0645\u0644 \u0627\u0644\u0633\u0642\u0641\nBluetooth Device - \u062c\u0647\u0627\u0632 \u0628\u0644\u0648\u062a\u0648\u062b\nAdditional Driver - \u0633\u0627\u0626\u0642 \u0625\u0636\u0627\u0641\u064a"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "\nBus\nCar\nTruck\nSports Car\nElectric Vehicle\nHybrid Vehicle\n4x4\nConvertible"
+  },
+  {
+   "fieldname": "column_break_gknb",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 11:36:53.990898",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Car Rental",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

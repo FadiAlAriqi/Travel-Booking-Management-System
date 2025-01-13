@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{transportation_company} - {make}, {model} {year}",
+ "creation": "2025-01-11 14:26:58.191311",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "make",
+  "year",
+  "license_plate",
+  "column_break_smia",
+  "type",
+  "model",
+  "color_ndcy",
+  "vehicle_image",
+  "vehicle_images_section",
+  "images"
+ ],
+ "fields": [
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "license_plate",
+   "fieldtype": "Data",
+   "label": "License Plate"
+  },
+  {
+   "fieldname": "column_break_smia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Bus\nCar\nTruck\nSports Car\nElectric Vehicle\nHybrid Vehicle\n4x4\nConvertible"
+  },
+  {
+   "fieldname": "color_ndcy",
+   "fieldtype": "Color"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Image"
+  },
+  {
+   "fieldname": "vehicle_images_section",
+   "fieldtype": "Section Break",
+   "label": "Vehicle Images"
+  },
+  {
+   "fieldname": "vehicle_image",
+   "fieldtype": "Attach Image",
+   "ignore_user_permissions": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Data",
+   "label": "Make"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Data",
+   "label": "Year"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Transport or Rental Company"
+  }
+ ],
+ "image_field": "vehicle_image",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 11:10:04.112026",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Vehicles",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

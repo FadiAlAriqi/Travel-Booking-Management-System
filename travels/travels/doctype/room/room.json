@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{hotel}, {room_type}-{floor_number}-{room_number}-{room_view}",
+ "creation": "2025-01-13 07:38:24.447509",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "hotel",
+  "column_break_zzqp",
+  "room_type",
+  "column_break_vlff",
+  "floor_number",
+  "column_break_obqe",
+  "room_number",
+  "section_break_dasj",
+  "bed_count",
+  "column_break_pinu",
+  "room_view",
+  "column_break_ugwg",
+  "price_per_night",
+  "section_break_cmil",
+  "amenities",
+  "images",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hotel",
+   "options": "Hotel"
+  },
+  {
+   "fieldname": "column_break_zzqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Room Type",
+   "options": "Single\nSuite\nDouble",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vlff",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "floor_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Floor Number",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_obqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Room Number",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_dasj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bed_count",
+   "fieldtype": "Int",
+   "label": "Bed Count",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pinu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "room_view",
+   "fieldtype": "Select",
+   "label": "Room View",
+   "options": "City View\nGarden View\nSea View"
+  },
+  {
+   "fieldname": "column_break_ugwg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_per_night",
+   "fieldtype": "Currency",
+   "label": "Price Per Night"
+  },
+  {
+   "fieldname": "section_break_cmil",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amenities",
+   "fieldtype": "Table",
+   "label": "Amenities",
+   "options": "Room Amenities"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Image"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 11:22:43.055090",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Room",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

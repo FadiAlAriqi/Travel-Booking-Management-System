@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-13 16:04:37.369997",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_details_section",
+  "customer",
+  "phone_number",
+  "email",
+  "section_break_ukuu",
+  "ticket",
+  "tab_2_tab",
+  "ticket_name",
+  "passenger_name",
+  "seat_number",
+  "check_xgqd",
+  "column_break_iktu",
+  "trip",
+  "trip_type",
+  "parent_ticket",
+  "section_break_mkdz",
+  "related_tickets"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Link",
+   "label": "Ticket",
+   "options": "Ticket"
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Passenger"
+  },
+  {
+   "fetch_from": "customer.phone_number",
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ukuu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "customer.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.ticket",
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 2"
+  },
+  {
+   "fetch_from": "ticket.trip_price",
+   "fieldname": "ticket_name",
+   "fieldtype": "Data",
+   "label": "Ticket Name"
+  },
+  {
+   "fetch_from": "ticket.passenger_name",
+   "fieldname": "passenger_name",
+   "fieldtype": "Data",
+   "label": "Passenger Name"
+  },
+  {
+   "fetch_from": "ticket.seat_number",
+   "fieldname": "seat_number",
+   "fieldtype": "Data",
+   "label": "Seat Number"
+  },
+  {
+   "default": "0",
+   "fetch_from": "ticket.is_dependent",
+   "fieldname": "check_xgqd",
+   "fieldtype": "Check",
+   "label": "Is Dependent"
+  },
+  {
+   "fieldname": "column_break_iktu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "ticket.trip",
+   "fieldname": "trip",
+   "fieldtype": "Data",
+   "label": "Trip"
+  },
+  {
+   "fetch_from": "ticket.trip_type",
+   "fieldname": "trip_type",
+   "fieldtype": "Data",
+   "label": "Trip Type"
+  },
+  {
+   "fetch_from": "ticket.parent_ticket",
+   "fieldname": "parent_ticket",
+   "fieldtype": "Data",
+   "label": "Parent Ticket"
+  },
+  {
+   "fieldname": "section_break_mkdz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "related_tickets",
+   "fieldtype": "Table",
+   "label": "Related Ticket",
+   "options": "Related Booking"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 17:21:57.863851",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Testing",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

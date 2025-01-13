@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-13 13:04:32.762439",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_name",
+  "section_break_zvys",
+  "country",
+  "hotel",
+  "room",
+  "column_break_qpih",
+  "city",
+  "rental_type",
+  "price_per_night",
+  "section_break_dwng",
+  "booking_commission",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "label": "Hotel",
+   "options": "Hotel"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "label": "Room",
+   "options": "Room"
+  },
+  {
+   "fieldname": "column_break_qpih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "rental_type",
+   "fieldtype": "Select",
+   "label": "Rental Type",
+   "options": "\nSingle\nSuite\nDouble"
+  },
+  {
+   "fetch_from": "room.price_per_night",
+   "fieldname": "price_per_night",
+   "fieldtype": "Currency",
+   "label": "Price Per Night"
+  },
+  {
+   "fieldname": "section_break_dwng",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "hotel.commission_rate",
+   "fieldname": "booking_commission",
+   "fieldtype": "Float",
+   "label": "Booking Commission"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break_zvys",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 13:21:36.256510",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Hotel Rental",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

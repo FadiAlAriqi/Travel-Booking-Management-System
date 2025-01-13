@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Trip From {from} To {to}, No.{###}",
+ "creation": "2025-01-11 14:26:21.397513",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "agent",
+  "price",
+  "column_break_uxnd",
+  "status",
+  "airplane",
+  "vehicle",
+  "departure_and_arrival_information_section",
+  "departure_date",
+  "departure_time",
+  "trip_duration",
+  "column_break_esdo",
+  "arrival_date",
+  "arrival_time",
+  "attendance_time",
+  "section_break_biwc",
+  "from",
+  "departure_airport",
+  "from_airport",
+  "departure_station",
+  "from_station",
+  "column_break_jzmd",
+  "to",
+  "arrival_airport",
+  "to_airport",
+  "arrival_station",
+  "to_station",
+  "trip_policy_section",
+  "trip_policy"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Road Trip\nFlight",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departure_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Departure Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departure_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Departure Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trip_duration",
+   "fieldtype": "Duration",
+   "label": "Trip Duration"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nCanceled\nCompleted"
+  },
+  {
+   "depends_on": "eval:doc.type === 'Flight'",
+   "fieldname": "departure_airport",
+   "fieldtype": "Link",
+   "label": "Departure Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.type === 'Flight'",
+   "fieldname": "arrival_airport",
+   "fieldtype": "Link",
+   "label": "Arrival Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.type === 'Road Trip'",
+   "fieldname": "departure_station",
+   "fieldtype": "Link",
+   "label": "Departure Station",
+   "options": "Transport Company Station"
+  },
+  {
+   "depends_on": "eval:doc.type === 'Road Trip'",
+   "fieldname": "arrival_station",
+   "fieldtype": "Link",
+   "label": "Arrival Station",
+   "options": "Transport Company Station"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "attendance_time",
+   "fieldtype": "Time",
+   "label": "Attendance Time"
+  },
+  {
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "label": "Arrival Date"
+  },
+  {
+   "fieldname": "arrival_time",
+   "fieldtype": "Time",
+   "label": "Arrival Time"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Data",
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Data",
+   "label": "To"
+  },
+  {
+   "fieldname": "trip_policy",
+   "fieldtype": "Text Editor",
+   "label": "Trip Policy"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "Agent"
+  },
+  {
+   "fieldname": "column_break_uxnd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type==='Road Trip'",
+   "fetch_from": "departure_station.city",
+   "fieldname": "from_station",
+   "fieldtype": "Data",
+   "label": "From Station"
+  },
+  {
+   "depends_on": "eval:doc.type==='Road Trip'",
+   "fetch_from": "arrival_station.city",
+   "fieldname": "to_station",
+   "fieldtype": "Data",
+   "label": "To Station"
+  },
+  {
+   "fieldname": "section_break_biwc",
+   "fieldtype": "Section Break",
+   "label": "Departure and Arrival Points"
+  },
+  {
+   "fieldname": "column_break_jzmd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type==='Flight'",
+   "fieldname": "airplane",
+   "fieldtype": "Link",
+   "label": "Airplane",
+   "options": "Airplane"
+  },
+  {
+   "depends_on": "eval:doc.type==='Road Trip'",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "vehicle",
+   "options": "Vehicles"
+  },
+  {
+   "fieldname": "departure_and_arrival_information_section",
+   "fieldtype": "Section Break",
+   "label": "Departure and Arrival Information"
+  },
+  {
+   "fieldname": "column_break_esdo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trip_policy_section",
+   "fieldtype": "Section Break",
+   "label": "Trip Policy"
+  },
+  {
+   "depends_on": "eval:doc.type==='Flight'",
+   "fetch_from": "departure_airport.city",
+   "fieldname": "from_airport",
+   "fieldtype": "Data",
+   "label": "From Airport"
+  },
+  {
+   "depends_on": "eval:doc.type==='Flight'",
+   "fetch_from": "arrival_airport.city",
+   "fieldname": "to_airport",
+   "fieldtype": "Data",
+   "label": "To Airport"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-12 11:47:17.950522",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Trip",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

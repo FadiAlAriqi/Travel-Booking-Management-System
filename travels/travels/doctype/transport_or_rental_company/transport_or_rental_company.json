@@ -1,0 +1,103 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{name1}-{country}",
+ "creation": "2025-01-11 13:13:54.159615",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "founding_date",
+  "country",
+  "headquarter",
+  "column_break_pcje",
+  "type",
+  "phone",
+  "email_address",
+  "section_break_bpda",
+  "commission_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "founding_date",
+   "fieldtype": "Date",
+   "label": "Founding date"
+  },
+  {
+   "fieldname": "headquarter",
+   "fieldtype": "Data",
+   "label": "Headquarter"
+  },
+  {
+   "fieldname": "column_break_pcje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Phone",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Transport\nRental",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_bpda",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-13 13:02:12.467171",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Transport or Rental Company",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

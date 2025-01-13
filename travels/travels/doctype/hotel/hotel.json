@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{hotel_name}-{country}-{city}",
+ "creation": "2025-01-12 15:00:36.257297",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "hotel_name",
+  "column_break_ukfi",
+  "type",
+  "column_break_cidr",
+  "category",
+  "column_break_whpl",
+  "website",
+  "address_section",
+  "country",
+  "column_break_cnhn",
+  "city",
+  "column_break_ixno",
+  "main_address",
+  "contact_section",
+  "phone_number",
+  "column_break_kurb",
+  "email_address",
+  "section_break_mwvj",
+  "rooms",
+  "commission_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "hotel_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Hotel Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ukfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Hotel\nResort\nServiced Apartment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cidr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "3-Star\n4-Star\n5-Star",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_whpl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website ",
+   "options": "URL"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Country",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cnhn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ixno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "main_address",
+   "fieldtype": "Data",
+   "label": "Main Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kurb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "section_break_mwvj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rooms",
+   "fieldtype": "Table",
+   "label": "Rooms",
+   "options": "Hotel Rooms",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Room",
+   "link_fieldname": "hotel"
+  }
+ ],
+ "modified": "2025-01-13 13:00:35.015255",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Hotel",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

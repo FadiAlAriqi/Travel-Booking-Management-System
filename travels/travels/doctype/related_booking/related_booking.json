@@ -15,20 +15,20 @@
    "fieldname": "ticket",
    "fieldtype": "Link",
    "label": "Ticket",
-   "options": "Ticket",
+   "options": "Ticket Booking",
    "unique": 1
   },
   {
    "fetch_from": "ticket.total_amount",
    "fieldname": "amount",
-   "fieldtype": "Currency",
+   "fieldtype": "Data",
    "label": "Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-01-12 12:31:30.635029",
+ "modified": "2025-01-18 17:09:56.437764",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Related Booking",

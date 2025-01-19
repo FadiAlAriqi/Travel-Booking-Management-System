@@ -8,19 +8,21 @@
  "field_order": [
   "type",
   "agent",
-  "price",
+  "price_for_one_way",
+  "price_for_return",
   "column_break_uxnd",
-  "status",
   "airplane",
+  "airline",
   "vehicle",
+  "rental_company",
+  "status",
+  "price_for_round_trip",
   "departure_and_arrival_information_section",
   "departure_date",
   "departure_time",
-  "trip_duration",
   "column_break_esdo",
   "arrival_date",
   "arrival_time",
-  "attendance_time",
   "section_break_biwc",
   "from",
   "departure_airport",
@@ -60,11 +62,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "trip_duration",
-   "fieldtype": "Duration",
-   "label": "Trip Duration"
-  },
-  {
    "default": "Scheduled",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -98,16 +95,6 @@
    "fieldtype": "Link",
    "label": "Arrival Station",
    "options": "Transport Company Station"
-  },
-  {
-   "fieldname": "price",
-   "fieldtype": "Currency",
-   "label": "Price"
-  },
-  {
-   "fieldname": "attendance_time",
-   "fieldtype": "Time",
-   "label": "Attendance Time"
   },
   {
    "fieldname": "arrival_date",
@@ -178,7 +165,7 @@
    "depends_on": "eval:doc.type==='Road Trip'",
    "fieldname": "vehicle",
    "fieldtype": "Link",
-   "label": "vehicle",
+   "label": "Vehicle",
    "options": "Vehicles"
   },
   {
@@ -208,11 +195,40 @@
    "fieldname": "to_airport",
    "fieldtype": "Data",
    "label": "To Airport"
+  },
+  {
+   "fieldname": "price_for_return",
+   "fieldtype": "Currency",
+   "label": "Price for return"
+  },
+  {
+   "fieldname": "price_for_round_trip",
+   "fieldtype": "Currency",
+   "label": "Price for round trip"
+  },
+  {
+   "fieldname": "price_for_one_way",
+   "fieldtype": "Currency",
+   "label": "Price for One Way"
+  },
+  {
+   "depends_on": "eval:doc.type==='Flight'",
+   "fetch_from": "airplane.airline",
+   "fieldname": "airline",
+   "fieldtype": "Data",
+   "label": "Airline"
+  },
+  {
+   "depends_on": "eval:doc.type==='Road Trip'",
+   "fetch_from": "vehicle.company",
+   "fieldname": "rental_company",
+   "fieldtype": "Data",
+   "label": "Rental Company"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-12 11:47:17.950522",
+ "modified": "2025-01-18 21:32:49.521218",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Trip",
@@ -229,6 +245,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

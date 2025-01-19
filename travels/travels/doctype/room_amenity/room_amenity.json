@@ -1,5 +1,4 @@
 {
- "_comments": "[{\"comment\": \"Action Failed<br><br>Option <strong>Room Amenity Type</strong> for field <strong>amenities</stron...\", \"by\": \"Administrator\", \"name\": \"hh7dcc0s4a\"}]",
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:description",
@@ -20,7 +19,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 10:31:52.979425",
+ "modified": "2025-01-18 21:42:08.657995",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Room Amenity",
@@ -37,6 +36,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

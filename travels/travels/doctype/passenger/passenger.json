@@ -173,7 +173,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 15:15:38.242338",
+ "modified": "2025-01-18 21:44:05.560733",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Passenger",
@@ -191,10 +191,18 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
+   "write": 1
   }
  ],
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "full_name"
 }

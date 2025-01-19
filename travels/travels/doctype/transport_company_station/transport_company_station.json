@@ -61,7 +61,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 10:55:27.907237",
+ "modified": "2025-01-18 21:35:42.874061",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Transport Company Station",
@@ -78,6 +78,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

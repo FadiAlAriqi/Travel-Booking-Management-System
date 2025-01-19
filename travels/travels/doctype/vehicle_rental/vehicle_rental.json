@@ -1,0 +1,238 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{company}, {vehicle} - {####}",
+ "creation": "2025-01-12 14:22:54.719309",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_frnu",
+  "vehicle_type",
+  "column_break_gknb",
+  "vehicle",
+  "section_break_gzgz",
+  "passenger_name",
+  "email",
+  "column_break_mgyw",
+  "phone_number",
+  "rental__information_section",
+  "rental_start_date",
+  "daily_rental_price",
+  "booking_amount",
+  "commission_amount",
+  "column_break_bfnb",
+  "rental_end_date",
+  "days",
+  "commission_rate",
+  "rental_company_amount",
+  "additional_services_section",
+  "insurance_options",
+  "column_break_cfjb",
+  "accessories_available",
+  "additional_information_section",
+  "pick_up_location",
+  "location_notes",
+  "column_break_xjro",
+  "drop_off_location"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Transport or Rental Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_frnu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vehicle",
+   "options": "Vehicles",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental__information_section",
+   "fieldtype": "Section Break",
+   "label": "Rental  Information"
+  },
+  {
+   "fieldname": "rental_start_date",
+   "fieldtype": "Date",
+   "label": "Rental Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "daily_rental_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Daily Rental Price",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bfnb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rental_end_date",
+   "fieldtype": "Date",
+   "label": "Rental End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_gzgz",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "passenger_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Passenger",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "passenger_name.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mgyw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "passenger_name.phone_number",
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "additional_information_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Information "
+  },
+  {
+   "fieldname": "pick_up_location",
+   "fieldtype": "Data",
+   "label": "Pick_up Location"
+  },
+  {
+   "fieldname": "location_notes",
+   "fieldtype": "Small Text",
+   "label": "Location Notes"
+  },
+  {
+   "fieldname": "column_break_xjro",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "drop_off_location",
+   "fieldtype": "Data",
+   "label": "Drop_off Location"
+  },
+  {
+   "fieldname": "additional_services_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Services"
+  },
+  {
+   "fieldname": "insurance_options",
+   "fieldtype": "Link",
+   "label": "Insurance Options",
+   "options": "Vehicle Rental Insurance"
+  },
+  {
+   "fieldname": "column_break_cfjb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accessories_available",
+   "fieldtype": "Link",
+   "label": "Accessories Available",
+   "options": "Vehicle Rental Accessories Available"
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Select",
+   "label": "Vehicle Type",
+   "options": "\nBus\nCar\nTruck\nSports Car\nElectric Vehicle\nHybrid Vehicle\n4x4\nConvertible"
+  },
+  {
+   "fieldname": "column_break_gknb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rental_company_amount",
+   "fieldtype": "Currency",
+   "label": "Rental Company Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "booking_amount",
+   "fieldtype": "Currency",
+   "label": "Booking Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "company.commission_rate",
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-18 21:32:31.581585",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Vehicle Rental",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

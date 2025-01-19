@@ -1,11 +1,12 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "format:{airline_name}",
  "creation": "2025-01-11 11:41:56.117800",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "airline_name",
   "iata_code",
   "icao_code",
   "country",
@@ -13,6 +14,10 @@
   "call_sign",
   "alias",
   "headquarters",
+  "contacts_section",
+  "phone_number",
+  "column_break_xlzs",
+  "email",
   "section_break_klji",
   "commission_rate"
  ],
@@ -67,15 +72,41 @@
    "fieldname": "commission_rate",
    "fieldtype": "Float",
    "label": "Commission Rate"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "contacts_section",
+   "fieldtype": "Section Break",
+   "label": "Contacts"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "column_break_xlzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "airline_name",
+   "fieldtype": "Data",
+   "label": "Name"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 13:01:21.225869",
+ "modified": "2025-01-18 21:53:35.603349",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Airline",
- "naming_rule": "Set by user",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -88,6 +119,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

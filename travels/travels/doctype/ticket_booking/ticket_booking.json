@@ -1,0 +1,233 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Ticket {###} for {trip}",
+ "creation": "2025-01-18 21:38:51.881797",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rkny",
+  "passenger_name",
+  "seat_number",
+  "column_break_xubd",
+  "trip",
+  "trip_type",
+  "ticket_type",
+  "section_break_xitw",
+  "departure_airport",
+  "departure_station",
+  "column_break_cbbi",
+  "arrival_airport",
+  "arrival_station",
+  "section_break_dcyb",
+  "departure_date",
+  "column_break_jxfq",
+  "departure_time",
+  "column_break_zrbe",
+  "status",
+  "section_break_btkf",
+  "preference",
+  "section_break_iand",
+  "trip_price",
+  "total_ticket_amount",
+  "column_break_agsf",
+  "total_amount",
+  "commission_rate",
+  "commission_amount"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_rkny",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "passenger_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Passenger Name",
+   "options": "Passenger",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seat_number",
+   "fieldtype": "Data",
+   "label": "Seat Number"
+  },
+  {
+   "fieldname": "column_break_xubd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "trip",
+   "fieldtype": "Link",
+   "label": "Trip",
+   "options": "Trip"
+  },
+  {
+   "fetch_from": "trip.type",
+   "fieldname": "trip_type",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Trip Type"
+  },
+  {
+   "fieldname": "ticket_type",
+   "fieldtype": "Select",
+   "label": "Ticket Type",
+   "options": "\nOne Way\nReturn\nRound Trip"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_xitw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Flight'",
+   "fetch_from": "trip.departure_airport",
+   "fieldname": "departure_airport",
+   "fieldtype": "Link",
+   "label": "Departure Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Road Trip'",
+   "fetch_from": "trip.departure_station",
+   "fieldname": "departure_station",
+   "fieldtype": "Link",
+   "label": "Departure Station",
+   "options": "Transport Company Station"
+  },
+  {
+   "fieldname": "column_break_cbbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Flight'",
+   "fetch_from": "trip.arrival_airport",
+   "fieldname": "arrival_airport",
+   "fieldtype": "Link",
+   "label": "Arrival Airport",
+   "options": "Airport"
+  },
+  {
+   "depends_on": "eval:doc.trip_type === 'Road Trip'",
+   "fetch_from": "trip.arrival_station",
+   "fieldname": "arrival_station",
+   "fieldtype": "Link",
+   "label": "Arrival Station",
+   "options": "Transport Company Station"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_dcyb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "trip.departure_date",
+   "fieldname": "departure_date",
+   "fieldtype": "Date",
+   "label": "Departure Date"
+  },
+  {
+   "fieldname": "column_break_jxfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "trip.departure_time",
+   "fieldname": "departure_time",
+   "fieldtype": "Time",
+   "label": "Departure Time"
+  },
+  {
+   "fieldname": "column_break_zrbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Booked",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Booked\nCanceled"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_btkf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "preference",
+   "fieldtype": "Table",
+   "label": "Preference",
+   "options": "Travel Preferences"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "section_break_iand",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "trip_price",
+   "fieldtype": "Currency",
+   "label": "Trip Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ticket_amount",
+   "fieldtype": "Currency",
+   "label": "Total Ticket Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_agsf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-18 21:40:57.176648",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Ticket Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

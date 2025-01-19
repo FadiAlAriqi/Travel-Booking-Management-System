@@ -1,52 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{customer_name},Booking-{####}",
  "creation": "2025-01-13 14:55:11.646933",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "customer",
+  "company",
+  "customer_name",
   "phone_number",
   "data_aqiv",
   "column_break_qnzd",
   "ticket_booking",
   "hotel_booking",
   "car_rental_booking",
+  "total",
+  "section_break_qjsn",
+  "debit_to",
+  "income_account",
   "tab_2_tab",
   "ticket_booking_section",
   "ticket",
+  "total_tickets_amount",
   "tab_3_tab",
-  "country",
   "hotel",
-  "room",
-  "column_break_zwuh",
-  "city",
-  "rental_type",
-  "price_per_night",
-  "section_break_altq",
-  "booking_commission",
-  "column_break_rdad",
-  "amount",
-  "car_rental_tab",
-  "company",
-  "column_break_zixw",
-  "vehicle_type",
-  "column_break_mmjo",
+  "section_break_jmbl",
+  "column_break_qzhc",
+  "column_break_dzuh",
+  "column_break_ilmu",
+  "total_hotels_amount",
+  "test_car_rental_tab",
   "vehicle",
-  "rental__information_section",
-  "rental_start_date",
-  "daily_rental_price",
-  "column_break_wbxs",
-  "rental_end_date",
-  "payment_information_section",
-  "payment_method",
-  "column_break_ffcw",
-  "payment_status",
-  "additional_information_section",
-  "pick_up_location",
-  "location_notes",
-  "column_break_ytcl",
-  "drop_off_location"
+  "amended_from",
+  "section_break_jsba",
+  "column_break_gxab",
+  "column_break_hokb",
+  "column_break_ewjw",
+  "total_rental_vehicles_amount"
  ],
  "fields": [
   {
@@ -68,9 +59,9 @@
   },
   {
    "fieldname": "ticket",
-   "fieldtype": "Link",
+   "fieldtype": "Table",
    "label": "Ticket",
-   "options": "Ticket"
+   "options": "Tickets Package"
   },
   {
    "depends_on": "eval:doc.hotel_booking===1",
@@ -91,198 +82,148 @@
    "label": "Email"
   },
   {
-   "fieldname": "country",
-   "fieldtype": "Link",
-   "label": "Country",
-   "options": "Country"
-  },
-  {
    "fieldname": "hotel",
-   "fieldtype": "Link",
+   "fieldtype": "Table",
    "label": "Hotel",
-   "options": "Hotel"
-  },
-  {
-   "fieldname": "room",
-   "fieldtype": "Link",
-   "label": "Room",
-   "options": "Room"
-  },
-  {
-   "fieldname": "column_break_zwuh",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "city",
-   "fieldtype": "Data",
-   "label": "City"
-  },
-  {
-   "fieldname": "rental_type",
-   "fieldtype": "Select",
-   "label": "Rental Type",
-   "options": "\nSingle\nSuite\nDouble"
-  },
-  {
-   "fieldname": "price_per_night",
-   "fieldtype": "Currency",
-   "label": "Price Per Night"
-  },
-  {
-   "fieldname": "section_break_altq",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "booking_commission",
-   "fieldtype": "Float",
-   "label": "Booking Commission"
-  },
-  {
-   "fieldname": "column_break_rdad",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "amount",
-   "fieldtype": "Currency",
-   "label": "Amount"
-  },
-  {
-   "depends_on": "eval:doc.car_rental_booking===1",
-   "fieldname": "car_rental_tab",
-   "fieldtype": "Tab Break",
-   "label": "Car Rental"
-  },
-  {
-   "fieldname": "company",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Company",
-   "options": "Transport or Rental Company",
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_zixw",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "vehicle_type",
-   "fieldtype": "Select",
-   "label": "Vehicle Type",
-   "options": "\nBus\nCar\nTruck\nSports Car\nElectric Vehicle\nHybrid Vehicle\n4x4\nConvertible"
-  },
-  {
-   "fieldname": "column_break_mmjo",
-   "fieldtype": "Column Break"
+   "options": "Hotel Rental Package"
   },
   {
    "fieldname": "vehicle",
-   "fieldtype": "Link",
-   "in_list_view": 1,
+   "fieldtype": "Table",
    "label": "Vehicle",
-   "options": "Vehicles",
-   "reqd": 1
-  },
-  {
-   "fieldname": "rental__information_section",
-   "fieldtype": "Section Break",
-   "label": "Rental  Information"
-  },
-  {
-   "fieldname": "rental_start_date",
-   "fieldtype": "Date",
-   "label": "Rental Start Date"
-  },
-  {
-   "fieldname": "daily_rental_price",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Daily Rental Price",
-   "non_negative": 1,
-   "reqd": 1
-  },
-  {
-   "fieldname": "column_break_wbxs",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "rental_end_date",
-   "fieldtype": "Date",
-   "label": "Rental End Date"
-  },
-  {
-   "fieldname": "payment_information_section",
-   "fieldtype": "Section Break",
-   "label": "Payment Information"
-  },
-  {
-   "fieldname": "payment_method",
-   "fieldtype": "Select",
-   "label": "Payment Method",
-   "options": "Cash\nBank Transfer\nCredit Card\nDebit Card\nDeferred Payment\nMobile Payment\nDigital Wallet\nCryptocurrency"
-  },
-  {
-   "fieldname": "column_break_ffcw",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "payment_status",
-   "fieldtype": "Select",
-   "label": "Payment Status",
-   "options": "Paid\nUnpaid\nPending\nPartially Paid"
-  },
-  {
-   "fieldname": "additional_information_section",
-   "fieldtype": "Section Break",
-   "label": "Additional Information "
-  },
-  {
-   "fieldname": "pick_up_location",
-   "fieldtype": "Data",
-   "label": "Pick_up Location"
-  },
-  {
-   "fieldname": "location_notes",
-   "fieldtype": "Long Text",
-   "label": "Location Notes"
-  },
-  {
-   "fieldname": "column_break_ytcl",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "drop_off_location",
-   "fieldtype": "Data",
-   "label": "Drop_off Location"
+   "options": "Vehicle Rental Package"
   },
   {
    "default": "0",
    "fieldname": "ticket_booking",
    "fieldtype": "Check",
+   "in_standard_filter": 1,
    "label": "Ticket Booking"
   },
   {
    "default": "0",
    "fieldname": "hotel_booking",
    "fieldtype": "Check",
+   "in_standard_filter": 1,
    "label": "Hotel Booking"
   },
   {
    "default": "0",
    "fieldname": "car_rental_booking",
    "fieldtype": "Check",
+   "in_standard_filter": 1,
    "label": "Car Rental Booking"
   },
   {
    "fieldname": "column_break_qnzd",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "customer.full_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jmbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dzuh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ilmu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.car_rental_booking===1",
+   "fieldname": "test_car_rental_tab",
+   "fieldtype": "Tab Break",
+   "label": "Car Rental"
+  },
+  {
+   "fieldname": "column_break_qzhc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total Booking Service"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Booking Services",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "section_break_jsba",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gxab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hokb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ewjw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_tickets_amount",
+   "fieldtype": "Currency",
+   "label": "Total Tickets Amount"
+  },
+  {
+   "fieldname": "total_hotels_amount",
+   "fieldtype": "Currency",
+   "label": "Total Hotels Amount"
+  },
+  {
+   "fieldname": "total_rental_vehicles_amount",
+   "fieldtype": "Currency",
+   "label": "Total Rental Vehicles Amount"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_qjsn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "debit_to",
+   "fieldtype": "Link",
+   "label": "Debit To",
+   "options": "Account"
+  },
+  {
+   "fieldname": "income_account",
+   "fieldtype": "Link",
+   "label": "Income Account",
+   "options": "Account"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-01-13 17:36:04.494787",
+ "modified": "2025-01-18 21:56:34.038259",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Booking Services",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -295,6 +236,16 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
+   "submit": 1,
    "write": 1
   }
  ],

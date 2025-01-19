@@ -3,7 +3,9 @@
 
 # import frappe
 from frappe.model.document import Document
+import frappe
 
 
 class Airplane(Document):
-	pass
+
+        pass

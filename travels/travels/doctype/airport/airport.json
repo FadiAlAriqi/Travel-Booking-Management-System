@@ -55,7 +55,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 12:05:55.289776",
+ "modified": "2025-01-18 21:51:50.042846",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Airport",
@@ -72,6 +72,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

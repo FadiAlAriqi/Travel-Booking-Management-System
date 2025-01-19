@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{name1}-{country}",
+ "autoname": "format:{name1}",
  "creation": "2025-01-11 13:13:54.159615",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,8 +12,9 @@
   "headquarter",
   "column_break_pcje",
   "type",
-  "phone",
-  "email_address",
+  "phone_number",
+  "city",
+  "email",
   "section_break_bpda",
   "commission_rate"
  ],
@@ -31,17 +32,6 @@
   {
    "fieldname": "column_break_pcje",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "phone",
-   "fieldtype": "Phone",
-   "label": "Phone"
-  },
-  {
-   "fieldname": "email_address",
-   "fieldtype": "Data",
-   "label": "Email Address",
-   "options": "Email"
   },
   {
    "fieldname": "name1",
@@ -73,11 +63,27 @@
    "fieldname": "commission_rate",
    "fieldtype": "Float",
    "label": "Commission Rate"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 13:02:12.467171",
+ "modified": "2025-01-18 21:35:11.665372",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Transport or Rental Company",
@@ -94,6 +100,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

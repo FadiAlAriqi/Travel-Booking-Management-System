@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{hotel_name}-{country}-{city}",
+ "autoname": "format:{hotel_name}, {city}",
  "creation": "2025-01-12 15:00:36.257297",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,7 +22,7 @@
   "contact_section",
   "phone_number",
   "column_break_kurb",
-  "email_address",
+  "email",
   "section_break_mwvj",
   "rooms",
   "commission_rate"
@@ -41,10 +41,10 @@
   },
   {
    "fieldname": "type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Type",
-   "options": "Hotel\nResort\nServiced Apartment",
+   "options": "Hotel Type",
    "reqd": 1
   },
   {
@@ -53,10 +53,10 @@
   },
   {
    "fieldname": "category",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Category",
-   "options": "3-Star\n4-Star\n5-Star",
+   "options": "Hotel Category",
    "reqd": 1
   },
   {
@@ -118,12 +118,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "email_address",
-   "fieldtype": "Data",
-   "label": "Email Address",
-   "options": "Email"
-  },
-  {
    "fieldname": "section_break_mwvj",
    "fieldtype": "Section Break"
   },
@@ -137,7 +131,14 @@
   {
    "fieldname": "commission_rate",
    "fieldtype": "Float",
-   "label": "Commission Rate"
+   "label": "Commission Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email ",
+   "options": "Email"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -147,7 +148,7 @@
    "link_fieldname": "hotel"
   }
  ],
- "modified": "2025-01-13 13:00:35.015255",
+ "modified": "2025-01-18 21:48:56.904444",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Hotel",
@@ -164,6 +165,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

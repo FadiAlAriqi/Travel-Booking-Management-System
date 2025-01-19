@@ -25,7 +25,7 @@ frappe.ui.form.on("Room", {
                                 },
                                 callback: function (save_response) {
                                     if (!save_response.exc) {
-                                        frappe.msgprint(__("Done"));
+                                        // frappe.msgprint(__("Done"));
                                         frappe.set_route("Form", "Hotel", frm.doc.hotel);
 
                                     }

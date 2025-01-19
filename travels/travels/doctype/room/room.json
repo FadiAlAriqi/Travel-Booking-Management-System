@@ -38,10 +38,10 @@
   },
   {
    "fieldname": "room_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Room Type",
-   "options": "Single\nSuite\nDouble",
+   "options": "Room Type",
    "reqd": 1
   },
   {
@@ -85,9 +85,9 @@
   },
   {
    "fieldname": "room_view",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Room View",
-   "options": "City View\nGarden View\nSea View"
+   "options": "Room View"
   },
   {
    "fieldname": "column_break_ugwg",
@@ -122,7 +122,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 11:22:43.055090",
+ "modified": "2025-01-18 21:42:43.465408",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Room",
@@ -139,6 +139,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

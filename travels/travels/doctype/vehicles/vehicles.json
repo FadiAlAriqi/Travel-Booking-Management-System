@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{transportation_company} - {make}, {model} {year}",
+ "autoname": "format:{company} - {make}, {model} {year}",
  "creation": "2025-01-11 14:26:58.191311",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -80,7 +80,7 @@
  "image_field": "vehicle_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-13 11:10:04.112026",
+ "modified": "2025-01-18 21:31:28.544242",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Vehicles",
@@ -97,6 +97,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

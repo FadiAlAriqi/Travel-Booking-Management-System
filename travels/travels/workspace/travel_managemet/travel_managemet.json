@@ -1,0 +1,325 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"gtPh7NOFmC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Travel Management</span>\",\"col\":12}},{\"id\":\"60sgFkn5bX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking Services\",\"col\":4}},{\"id\":\"VUomof5u7O\",\"type\":\"card\",\"data\":{\"card_name\":\"Bookings List\",\"col\":4}},{\"id\":\"wG7pLz5Htn\",\"type\":\"card\",\"data\":{\"card_name\":\"Suppliers\",\"col\":4}},{\"id\":\"dc0fPMUQXr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"R2joTbGaiU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TQDLvmVs44\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trips\",\"col\":4}},{\"id\":\"_ofQWFRS77\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Passengers\",\"col\":4}},{\"id\":\"I-U_nMY2jP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Agents\",\"col\":4}},{\"id\":\"NZGtLb4lPh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GJoUMz1sYU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"NFmIgzxajq\",\"type\":\"card\",\"data\":{\"card_name\":\"Flight\",\"col\":4}},{\"id\":\"sWK6e6fdTz\",\"type\":\"card\",\"data\":{\"card_name\":\"Transport and Rental\",\"col\":4}},{\"id\":\"UaA1ijRQTm\",\"type\":\"card\",\"data\":{\"card_name\":\"Hotel\",\"col\":4}}]",
+ "creation": "2025-01-18 22:04:08.107048",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "group-by",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Travel Managemet",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bookings List",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ticket Booking",
+   "link_count": 0,
+   "link_to": "Ticket Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Booking",
+   "link_count": 0,
+   "link_to": "Hotel Booking",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Rental",
+   "link_count": 0,
+   "link_to": "Vehicle Rental",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Suppliers",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Rental",
+   "link_count": 0,
+   "link_to": "Airline",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transport or Rental Companies",
+   "link_count": 0,
+   "link_to": "Transport or Rental Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotels",
+   "link_count": 0,
+   "link_to": "Hotel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Flight",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Airlines",
+   "link_count": 0,
+   "link_to": "Airline",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Airports",
+   "link_count": 0,
+   "link_to": "Airport",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Airplanes",
+   "link_count": 0,
+   "link_to": "Airplane",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Airplane Model",
+   "link_count": 0,
+   "link_to": "Airplane Model",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transport and Rental",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transport or Rental Company",
+   "link_count": 0,
+   "link_to": "Transport or Rental Company",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicles",
+   "link_count": 0,
+   "link_to": "Vehicles",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Rental Insurance",
+   "link_count": 0,
+   "link_to": "Vehicle Rental Insurance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vehicle Rental Accessories Available",
+   "link_count": 0,
+   "link_to": "Vehicle Rental Accessories Available",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel",
+   "link_count": 7,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel",
+   "link_count": 0,
+   "link_to": "Hotel",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Type",
+   "link_count": 0,
+   "link_to": "Hotel Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Hotel Category",
+   "link_count": 0,
+   "link_to": "Hotel Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room",
+   "link_count": 0,
+   "link_to": "Room",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Type",
+   "link_count": 0,
+   "link_to": "Room Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room View",
+   "link_count": 0,
+   "link_to": "Room View",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Room Amenity",
+   "link_count": 0,
+   "link_to": "Room Amenity",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-01-19 09:45:03.163175",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Travel Managemet",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Sales Manager"
+  },
+  {
+   "role": "Travel Managment"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Trips",
+   "link_to": "Trip",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Booking Services",
+   "link_to": "Booking Services",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Passengers",
+   "link_to": "Passenger",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Agents",
+   "link_to": "Agent",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Travel Managemet"
+}

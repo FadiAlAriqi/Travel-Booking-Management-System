@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-14 15:04:50.849392",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "hotel",
+  "room_type",
+  "price_per_night",
+  "commission_rate",
+  "booking_amount",
+  "hotel_payable_amount",
+  "hotel_commission_amount",
+  "hotel_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "label": "Hotel",
+   "options": "Hotel Booking"
+  },
+  {
+   "fetch_from": "hotel.rental_type",
+   "fieldname": "room_type",
+   "fieldtype": "Data",
+   "label": "Room Type"
+  },
+  {
+   "fetch_from": "hotel.price_per_night",
+   "fieldname": "price_per_night",
+   "fieldtype": "Currency",
+   "label": "Price Per Night"
+  },
+  {
+   "fetch_from": "hotel.booking_amount",
+   "fieldname": "booking_amount",
+   "fieldtype": "Currency",
+   "label": "Booking Amount"
+  },
+  {
+   "fetch_from": "hotel.commission_amount",
+   "fieldname": "hotel_commission_amount",
+   "fieldtype": "Currency",
+   "label": "Hotel Commission Amount"
+  },
+  {
+   "fetch_from": "hotel.hotel_amount",
+   "fieldname": "hotel_payable_amount",
+   "fieldtype": "Currency",
+   "label": "Hotel Payable Amount"
+  },
+  {
+   "fetch_from": "hotel.commission_rate",
+   "fieldname": "commission_rate",
+   "fieldtype": "Data",
+   "label": "Commission Rate"
+  },
+  {
+   "fetch_from": "hotel.hotel",
+   "fieldname": "hotel_name",
+   "fieldtype": "Data",
+   "label": "Hotel Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-18 21:26:50.451243",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Hotel Rental Package",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

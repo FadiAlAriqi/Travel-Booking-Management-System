@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-13 16:59:03.890052",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ticket",
+  "ticket_type",
+  "booking_amount",
+  "commission_amount",
+  "total_ticket_amount",
+  "payment",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "ticket",
+   "fieldtype": "Link",
+   "label": "Ticket",
+   "options": "Ticket Booking"
+  },
+  {
+   "fetch_from": "ticket.ticket_type",
+   "fieldname": "ticket_type",
+   "fieldtype": "Data",
+   "label": "Ticket Type"
+  },
+  {
+   "fetch_from": "ticket.total_amount",
+   "fieldname": "booking_amount",
+   "fieldtype": "Currency",
+   "label": "Booking Amount"
+  },
+  {
+   "fetch_from": "ticket.commission_amount",
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount "
+  },
+  {
+   "fetch_from": "ticket.total_ticket_amount",
+   "fieldname": "total_ticket_amount",
+   "fieldtype": "Currency",
+   "label": "Total Ticket Amount "
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Button",
+   "label": "Payment"
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-18 17:10:07.605630",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Tickets Package",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

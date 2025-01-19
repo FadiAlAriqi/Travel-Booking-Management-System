@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{hotel}-{####}",
+ "creation": "2025-01-13 13:04:32.762439",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zvys",
+  "customer",
+  "country",
+  "hotel",
+  "room",
+  "hotel_name",
+  "column_break_qpih",
+  "city",
+  "rental_type",
+  "price_per_night",
+  "from_date",
+  "to_date",
+  "section_break_dwng",
+  "booking_amount",
+  "column_break_zaob",
+  "commission_rate",
+  "section_break_gmau",
+  "commission_amount",
+  "column_break_qqml",
+  "hotel_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "hotel",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Hotel",
+   "options": "Hotel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Room",
+   "options": "Room",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qpih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "rental_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Rental Type",
+   "options": "Room Type",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "room.price_per_night",
+   "fieldname": "price_per_night",
+   "fieldtype": "Currency",
+   "label": "Price Per Night",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_dwng",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_zvys",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_gmau",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qqml",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Passenger",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "booking_amount",
+   "fieldtype": "Currency",
+   "label": "Booking Amount"
+  },
+  {
+   "fieldname": "column_break_zaob",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "hotel.commission_rate",
+   "fieldname": "commission_rate",
+   "fieldtype": "Float",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "hotel_amount",
+   "fieldtype": "Currency",
+   "label": "Hotel Amount"
+  },
+  {
+   "fetch_from": "hotel.hotel_name",
+   "fieldname": "hotel_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Hotel Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-18 21:48:19.969551",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Hotel Booking",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-14 15:03:28.882218",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vehicle",
+  "booking_amount",
+  "payment_status",
+  "column_break_ucwp",
+  "days",
+  "price_per_day",
+  "commission_amount",
+  "rental_company_amount",
+  "payment"
+ ],
+ "fields": [
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle Rental"
+  },
+  {
+   "fetch_from": "vehicle.daily_rental_price",
+   "fieldname": "price_per_day",
+   "fieldtype": "Currency",
+   "label": "Price per day",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.days",
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "vehicle.booking_amount",
+   "fieldname": "booking_amount",
+   "fieldtype": "Data",
+   "label": "Booking Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ucwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vehicle.rental_company_amount",
+   "fieldname": "rental_company_amount",
+   "fieldtype": "Float",
+   "label": "Rental Company Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Button",
+   "label": "Payment"
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Paid\nUnpaid"
+  },
+  {
+   "fetch_from": "vehicle.commission_amount",
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-01-15 13:11:35.971583",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Vehicle Rental Package",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

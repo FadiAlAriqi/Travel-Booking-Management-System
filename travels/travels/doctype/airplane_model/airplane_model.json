@@ -30,7 +30,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-11 13:34:46.780367",
+ "modified": "2025-01-18 21:52:38.890466",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Airplane Model",
@@ -47,6 +47,13 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "Travel Managment",
    "write": 1
   }
  ],

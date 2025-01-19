@@ -60,8 +60,9 @@
   },
   {
    "fieldname": "headquarters",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Headquarters",
+   "options": "City",
    "reqd": 1
   },
   {
@@ -102,7 +103,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-01-18 21:53:35.603349",
+ "modified": "2025-01-19 13:17:34.633517",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Airline",

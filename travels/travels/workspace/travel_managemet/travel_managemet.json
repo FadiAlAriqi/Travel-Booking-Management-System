@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"gtPh7NOFmC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Travel Management</span>\",\"col\":12}},{\"id\":\"60sgFkn5bX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Booking Services\",\"col\":4}},{\"id\":\"VUomof5u7O\",\"type\":\"card\",\"data\":{\"card_name\":\"Bookings List\",\"col\":4}},{\"id\":\"wG7pLz5Htn\",\"type\":\"card\",\"data\":{\"card_name\":\"Suppliers\",\"col\":4}},{\"id\":\"dc0fPMUQXr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"R2joTbGaiU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TQDLvmVs44\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trips\",\"col\":4}},{\"id\":\"_ofQWFRS77\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Passengers\",\"col\":4}},{\"id\":\"I-U_nMY2jP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Agents\",\"col\":4}},{\"id\":\"NZGtLb4lPh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GJoUMz1sYU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"NFmIgzxajq\",\"type\":\"card\",\"data\":{\"card_name\":\"Flight\",\"col\":4}},{\"id\":\"sWK6e6fdTz\",\"type\":\"card\",\"data\":{\"card_name\":\"Transport and Rental\",\"col\":4}},{\"id\":\"UaA1ijRQTm\",\"type\":\"card\",\"data\":{\"card_name\":\"Hotel\",\"col\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Booking Service",
+   "label": "Booking Service"
+  }
+ ],
+ "content": "[{\"id\":\"gtPh7NOFmC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Travel Management</span>\",\"col\":12}},{\"id\":\"zpaduTo9uC\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Booking Service\",\"col\":12}},{\"id\":\"L9Hrym6cNN\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Hotels\",\"col\":4}},{\"id\":\"Ir3Dac2nYm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Car Rental Company\",\"col\":4}},{\"id\":\"-CcY3z3bCz\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Airline Company\",\"col\":4}},{\"id\":\"dc0fPMUQXr\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"wG7pLz5Htn\",\"type\":\"card\",\"data\":{\"card_name\":\"Suppliers\",\"col\":4}},{\"id\":\"VUomof5u7O\",\"type\":\"card\",\"data\":{\"card_name\":\"Bookings List\",\"col\":4}},{\"id\":\"R2joTbGaiU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"TQDLvmVs44\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trips\",\"col\":4}},{\"id\":\"_ofQWFRS77\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Passengers\",\"col\":4}},{\"id\":\"I-U_nMY2jP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Agents\",\"col\":4}},{\"id\":\"NZGtLb4lPh\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"GJoUMz1sYU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"NFmIgzxajq\",\"type\":\"card\",\"data\":{\"card_name\":\"Flight\",\"col\":4}},{\"id\":\"sWK6e6fdTz\",\"type\":\"card\",\"data\":{\"card_name\":\"Transport and Rental\",\"col\":4}},{\"id\":\"UaA1ijRQTm\",\"type\":\"card\",\"data\":{\"card_name\":\"Hotel\",\"col\":4}}]",
  "creation": "2025-01-18 22:04:08.107048",
  "custom_blocks": [],
  "docstatus": 0,
@@ -269,11 +274,24 @@
    "type": "Link"
   }
  ],
- "modified": "2025-01-19 09:45:03.163175",
+ "modified": "2025-01-19 12:57:46.323513",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Travel Managemet",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Hotels",
+   "number_card_name": "Hotels"
+  },
+  {
+   "label": "Car Rental Company",
+   "number_card_name": "Rental Company"
+  },
+  {
+   "label": "Airline Company",
+   "number_card_name": "Airlines"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -293,14 +311,6 @@
    "doc_view": "List",
    "label": "Trips",
    "link_to": "Trip",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Booking Services",
-   "link_to": "Booking Services",
    "stats_filter": "[]",
    "type": "DocType"
   },

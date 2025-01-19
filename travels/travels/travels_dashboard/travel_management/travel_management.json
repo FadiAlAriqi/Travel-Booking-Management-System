@@ -1,0 +1,29 @@
+{
+ "cards": [
+  {
+   "card": "Tickets"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Hotel",
+   "width": "Full"
+  },
+  {
+   "chart": "Booking Service",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-01-19 12:30:45.190503",
+ "dashboard_name": "Travel Management",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-01-19 12:40:45.479237",
+ "modified_by": "Administrator",
+ "module": "Travels",
+ "name": "Travel Management",
+ "owner": "Administrator"
+}

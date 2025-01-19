@@ -88,8 +88,9 @@
   },
   {
    "fieldname": "city",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "City",
+   "options": "City",
    "reqd": 1
   },
   {
@@ -148,7 +149,7 @@
    "link_fieldname": "hotel"
   }
  ],
- "modified": "2025-01-18 21:48:56.904444",
+ "modified": "2025-01-19 13:16:18.774473",
  "modified_by": "Administrator",
  "module": "Travels",
  "name": "Hotel",

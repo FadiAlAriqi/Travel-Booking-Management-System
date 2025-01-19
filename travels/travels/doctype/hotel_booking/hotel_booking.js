@@ -44,6 +44,39 @@ frappe.ui.form.on('Hotel Booking', {
                 });
             }
         // }
+    },
+    hotel: function (frm) {
+        frm.set_query('room', function () {
+            if (frm.doc.hotel) {
+                return {
+                    filters: {
+                        hotel: frm.doc.hotel // تصفية الغرف بناءً على الفندق المختار
+                    }
+                };
+            }
+        });
+    },
+    country: function (frm) {
+        frm.set_query('hotel', function () {
+            let filters = {};
+
+            // إذا تم تحديد الدولة
+            if (frm.doc.country) {
+                filters.country = frm.doc.country;
+            }
+
+            // إذا تم تحديد المدينة
+            if (frm.doc.city) {
+                filters.city = frm.doc.city;
+            }
+
+            return {
+                filters: filters
+            };
+        });
+    },
+    city: function (frm) {
+        frm.trigger('country'); // إعادة تطبيق الفلتر إذا تم تعديل المدينة
     }
 });
 
